@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* AvatoAI Custom Colors */
+  --heading: 0 0% 0%;
+  --body: 0 0% 5%;
+  --primary: 14 100% 60%;
+  --secondary: 37 100% 65%;
+  --white: 0 0% 100%;
+  --gray: 0 0% 25%;
+  --light: 0 0% 90%;
+  
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: var(--body);
+    --card: 0 0% 100%;
+    --card-foreground: var(--body);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--body);
+    --primary: var(--primary);
+    --primary-foreground: var(--white);
+    --secondary: var(--secondary);
+    --secondary-foreground: var(--heading);
+    --muted: var(--light);
+    --muted-foreground: var(--gray);
+    --accent: var(--light);
+    --accent-foreground: var(--heading);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--white);
+    --border: var(--light);
+    --input: var(--light);
+    --ring: var(--primary);
+    --radius: 0.75rem;
+  }
+  
+  .dark {
+    --background: var(--gray);
+    --foreground: var(--white);
+    --card: var(--gray);
+    --card-foreground: var(--white);
+    --popover: var(--gray);
+    --popover-foreground: var(--white);
+    --primary: var(--primary);
+    --primary-foreground: var(--white);
+    --secondary: var(--gray);
+    --secondary-foreground: var(--white);
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: var(--white);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--white);
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: var(--primary);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black font-raleway font-bold;
+  }
+}
+
+@layer utilities {
+  .text-heading {
+    color: #000000;
+  }
+  .text-body {
+    color: #0c0c0c;
+  }
+  .text-primary {
+    color: #ff6b35;
+  }
+  .text-secondary {
+    color: #ffb84d;
+  }
+  .text-gray {
+    color: #414141;
+  }
+  .text-light {
+    color: #e6e6e6;
+  }
+  .bg-primary {
+    background-color: #ff6b35;
+  }
+  .bg-secondary {
+    background-color: #ffb84d;
+  }
+  .bg-gray {
+    background-color: #414141;
+  }
+  .bg-light {
+    background-color: #e6e6e6;
+  }
+  .border-primary {
+    border-color: #ff6b35;
+  }
+  .hover\:bg-primary:hover {
+    background-color: #ff6b35;
+  }
+  .hover\:text-primary:hover {
+    color: #ff6b35;
+  }
+}
