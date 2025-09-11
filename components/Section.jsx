@@ -1,13 +1,14 @@
-export default function Section({ title, children, className = '' }) {
+export default function Section({ title, subtitle, children, className = "" }) {
   return (
-    <section className={`mb-12 ${className}`}>
-      <div className="mb-6">
-        <h2 className="text-2xl font-raleway font-bold text-heading mb-2">
+    <section className={`mb-16 ${className}`}>
+      <div className="mb-8">
+        <h2 className="text-3xl font-raleway font-bold text-heading mb-3">
           {title}
         </h2>
-        <div className="w-16 h-1 bg-primary rounded-full"></div>
+        {subtitle && <p className="text-body text-lg max-w-2xl">{subtitle}</p>}
+        <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary rounded-full mt-4"></div>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {children}
       </div>
     </section>
