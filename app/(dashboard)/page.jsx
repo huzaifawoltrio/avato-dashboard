@@ -109,8 +109,7 @@ const allTools = [
   // Smart Content & Branding
   {
     title: "Content Shield",
-    description:
-      "Protect your content against plagiarism and unauthorized usage.",
+    description: "Protect your content against plagiarism..",
     href: "/tools/content/shield",
     icon: Shield,
   },
